@@ -1,6 +1,8 @@
 <template>
-    <v-app-bar app color="grey-darken-4">
+    <v-app-bar app color="black">
+      <div class="text-center">
       <h1 class="header-title mx-7">Larvae yeT</h1>
+      </div>
       <v-spacer></v-spacer>
       <div class="menu">
         <v-btn text>Home</v-btn>
@@ -10,12 +12,12 @@
     </v-app-bar>
 
      <!-- メインコンテンツセクション -->
-     <v-main>
+     <v-main class="custom-bg-color">
         <v-container class="text-center grey">
           <!-- 画像を中央に配置 -->
           <v-row justify="center">
-            <div class="mt-2">
-              <img src="/images/header.jpeg" alt="Image" width="1200" height="400" >
+            <div class="">
+              <img src="/images/header.jpeg" alt="Image" width="1200" height="200" >
             </div>
             <video width="1200" height="400" controls>
                 <source src="larv.mov" type="video/mov">
@@ -35,6 +37,10 @@
   </template>
   
   <style>
+  .custom-bg-color {
+    background-color: black; /* カスタムの背景色を指定 */
+  }
+
   .header-title {
     font-size: 24px;
     color: #E0E0E0;

@@ -5,8 +5,7 @@
   </v-app>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script setup>
 import Header from "./components/Header.vue"; // ヘッダーコンポーネントのパスを指定

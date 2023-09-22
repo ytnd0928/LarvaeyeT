@@ -1,11 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import vuetify from './plugins/vuetify'
-import { loadFonts } from './plugins/webfontloader'
+import { createApp } from "vue";
+import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
+import { loadFonts } from "./plugins/webfontloader";
 // import routes from './router/routes'; // Vue Routerの設定をインポート
 // import { createRouter, createWebHistory } from 'vue-router';
 
-loadFonts()
+loadFonts();
 
 // const router = createRouter({
 //   history: createWebHistory(),
@@ -15,5 +15,4 @@ loadFonts()
 createApp(App)
   .use(vuetify)
 
-  .mount('#app')
-  
+  .mount("#app");

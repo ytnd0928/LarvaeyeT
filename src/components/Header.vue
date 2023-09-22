@@ -1,63 +1,41 @@
 <template>
-    <v-app-bar app color="black">
-      <div class="text-center">
-      <h1 class="header-title mx-7">Larvae yeT</h1>
-      </div>
-      <v-spacer></v-spacer>
-      <div class="menu">
-        <v-btn text>Home</v-btn>
-        <v-btn text>LOOK</v-btn>
-        <v-btn text>STORE</v-btn>
-      </div>
-    </v-app-bar>
+  <v-app-bar app color="black">
+    <v-spacer />
+    <h1 class="header-title mx-7">Larvae yeT</h1>
+    <div class="menu">
+      <v-btn text>Home</v-btn>
+      <v-btn text>LOOK</v-btn>
+      <v-btn text>STORE</v-btn>
+    </div>
+  </v-app-bar>
+</template>
 
-     <!-- メインコンテンツセクション -->
-     <v-main class="custom-bg-color">
-        <v-container class="text-center grey">
-          <!-- 画像を中央に配置 -->
-          <v-row justify="center">
-            <div class="">
-              <img src="/images/header.jpeg" alt="Image" width="1200" height="200" >
-            </div>
-            <video width="1200" height="400" controls>
-                <source src="larv.mov" type="video/mov">
-                Your browser does not support the video tag.
-              </video>
-          </v-row>
-          
-          <!-- その他のコンテンツ -->
-          <v-row>
-            <v-col cols="12">
-              
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-main>
+<style>
+.custom-bg-color {
+  background-color: black; /* カスタムの背景色を指定 */
+  height: 1500px;
+}
 
-  </template>
-  
-  <style>
-  .custom-bg-color {
-    background-color: black; /* カスタムの背景色を指定 */
-  }
+.header-title {
+  font-size: 24px;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+.menu {
+  color: #e0e0e0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex: 1 1;
+}
 
-  .header-title {
-    font-size: 24px;
-    color: #E0E0E0;
-    font-weight: bold;
-  }
-  .menu {
-    color: #E0E0E0;
-  }
+.mt-2 {
+  margin-top: 2rem; /* 2remのマージンを追加（調整可能） */
+}
+</style>
 
-  .mt-2 {
-    margin-top: 2rem; /* 2remのマージンを追加（調整可能） */
-  }
-  </style>
-  
-  <script>
-  export default {
-    name: "AppHeader", // コンポーネント名を "AppHeader" に変更
-  };
-  </script>
-  
+<script>
+export default {
+  name: "AppHeader", // コンポーネント名を "AppHeader" に変更
+};
+</script>

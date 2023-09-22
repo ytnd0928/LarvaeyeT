@@ -1,25 +1,24 @@
 <template>
-  <v-app>
-    <v-main>
-      <Header/>
-    </v-main>
+  <v-app class="custom-bg-color">
+    <Header />
+    <Home />
   </v-app>
 </template>
 
-<script>
-import Header from './components/Header.vue'; // ヘッダーコンポーネントのパスを指定
+<style>
+</style>
 
-export default {
-  name: 'App',
+<script setup>
+import Header from "./components/Header.vue"; // ヘッダーコンポーネントのパスを指定
+import Home from "./components/Home.vue";
+import { ref, onMounted } from "vue";
 
-  components: {
-  Header,
-  // 他のコンポーネントもここに追加できます
-},
+const showOverlay = ref(true);
 
-
-  data: () => ({
-    //
-  }),
-}
+onMounted(() => {
+  // アクセス時に3秒後にフェードアウトを非表示にする
+  setTimeout(() => {
+    showOverlay.value = false;
+  }, 3000); // ミリ秒単位の時間を指定
+});
 </script>

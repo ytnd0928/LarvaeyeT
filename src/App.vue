@@ -1,7 +1,7 @@
 <template>
   <v-app class="custom-bg-color">
     <Header />
-    <Home />
+    <router-view />
   </v-app>
 </template>
 
@@ -9,7 +9,7 @@
 
 <script setup>
 import Header from "./components/Header.vue"; // ヘッダーコンポーネントのパスを指定
-import Home from "./components/Home.vue";
+// import Home from "./components/Home.vue";
 import { ref, onMounted } from "vue";
 
 const showOverlay = ref(true);

@@ -3,9 +3,9 @@
     <v-spacer />
     <h1 class="header-title mx-7">Larvae yeT</h1>
     <div class="menu">
-      <v-btn text>Home</v-btn>
-      <v-btn text>LOOK</v-btn>
-      <v-btn text>STORE</v-btn>
+      <v-btn text to="/">Home</v-btn>
+      <v-btn text to="/look">LOOK</v-btn>
+      <v-btn text to="/store">STORE</v-btn>
     </div>
   </v-app-bar>
 </template>

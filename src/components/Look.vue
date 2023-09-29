@@ -1,5 +1,6 @@
 <template>
   <body>
+    <!-- <div class="title">Under Construction</div> -->
     <div class="image-tile">
       <img src="/images/01.jpg" />
     </div>
@@ -84,8 +85,13 @@
   </body>
 </template>
 <style>
+title {
+  margin-top: 25px;
+  text-align: center;
+  color: #ccc;
+}
 body {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
   background-color: black;
@@ -110,13 +116,7 @@ body {
 <script>
 export default {
   data() {
-    return {
-      // images: Array.from(
-      //   { length: 27 },
-      //   (_, index) => String(index + 1).padStart(2, "0") + ".jpg"
-      // ),
-      imagePath: "src/assets/images/02.jpg",
-    };
+    return { imagePath: "src/assets/images/02.jpg" };
   },
 };
 </script>

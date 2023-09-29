@@ -30,6 +30,7 @@
 <style>
 .custom-bg-color {
   background-color: black;
+  margin-top: 10px;
 }
 .video-fit {
   width: 100%;

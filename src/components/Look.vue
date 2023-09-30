@@ -1,33 +1,34 @@
 <template>
-  <div>
-    <div
-      class="image-tile"
-      v-for="(image, index) in images"
-      :key="index"
-      @click="openModal(image)"
-    >
-      <img :src="image" alt="画像の説明" />
-    </div>
-
-    <!-- モーダルを表示するためのteleportコンポーネント -->
-    <teleport to="body">
-      <div v-if="modalVisible" class="modal">
-        <div class="modal-content">
-          <span class="close" @click="closeModal">&times;</span>
-          <img :src="modalImage" alt="画像の説明" />
-        </div>
+  <body>
+    <!-- ギャラリー -->
+    <div class="image-gallery">
+      <div
+        class="image-tile"
+        v-for="(image, index) in images"
+        :key="index"
+        @click="openModal(image)"
+      >
+        <img :src="image" alt="画像の説明" />
       </div>
-    </teleport>
-  </div>
+    </div>
+  </body>
+
+  <!-- モーダルを表示するためのteleportコンポーネント -->
+  <teleport to="body">
+    <div v-if="modalVisible" class="modal">
+      <div class="modal-content">
+        <span class="close" @click="closeModal">&times;</span>
+        <img :src="modalImage" alt="画像の説明" />
+      </div>
+    </div>
+  </teleport>
 </template>
 <style scoped>
 body {
   margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
   background-color: black;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center; /* ギャラリー全体を中央寄せ */
 }
 
 .image-tile {
@@ -37,8 +38,15 @@ body {
   border: 0px solid #ccc;
 }
 
+.image-gallery {
+  margin-top: 80px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px; /* ギャラリーの最大幅 */
+}
 .image-tile img {
-  width: 300px;
+  width: 100%; /* コンテナに合わせて画像を伸縮 */
   height: auto;
   display: block;
 }
@@ -69,9 +77,15 @@ body {
   position: relative;
   margin: 10% auto;
   padding: 20px;
-  max-width: 800px;
+  max-width: 500px;
   background-color: #fff;
   border-radius: 5px;
+}
+.modal-content img {
+  max-width: 100%; /* 画像の最大幅を100%に制限 */
+  max-height: 80vh; /* 画面の高さの80%までに制限 */
+  display: block; /* 余白を解消するためにブロック要素として表示 */
+  margin: 0 auto; /* 水平方向に中央寄せ */
 }
 
 .close:hover {
@@ -87,7 +101,31 @@ export default {
       images: [
         "/images/01.jpg",
         "/images/02.jpg",
-        // 他の画像のパスを追加
+        "/images/03.jpg",
+        "/images/04.jpg",
+        "/images/05.jpg",
+        "/images/06.jpg",
+        "/images/07.jpg",
+        "/images/08.jpg",
+        "/images/09.jpg",
+        "/images/10.jpg",
+        "/images/11.jpg",
+        "/images/12.jpg",
+        "/images/13.jpg",
+        "/images/14.jpg",
+        "/images/15.jpg",
+        "/images/16.jpg",
+        "/images/17.jpg",
+        "/images/18.jpg",
+        "/images/19.jpg",
+        "/images/20.jpg",
+        "/images/21.jpg",
+        "/images/22.jpg",
+        "/images/23.jpg",
+        "/images/24.jpg",
+        "/images/25.jpg",
+        "/images/26.jpg",
+        "/images/27.jpg",
       ],
       modalVisible: false, // モーダルの表示状態
       modalImage: "", // モーダルに表示する画像のパス

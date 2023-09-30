@@ -1,95 +1,26 @@
 <template>
-  <body>
-    <!-- <div class="title">Under Construction</div> -->
-    <div class="image-tile">
-      <img src="/images/01.jpg" />
+  <div>
+    <div
+      class="image-tile"
+      v-for="(image, index) in images"
+      :key="index"
+      @click="openModal(image)"
+    >
+      <img :src="image" alt="画像の説明" />
     </div>
-    <div class="image-tile">
-      <img src="/images/02.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/03.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/04.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/05.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/06.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/07.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/08.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/09.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/10.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/11.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/12.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/13.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/14.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/15.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/16.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/17.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/18.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/19.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/20.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/21.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/22.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/23.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/24.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/25.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/26.jpg" />
-    </div>
-    <div class="image-tile">
-      <img src="/images/27.jpg" />
-    </div>
-  </body>
+
+    <!-- モーダルを表示するためのteleportコンポーネント -->
+    <teleport to="body">
+      <div v-if="modalVisible" class="modal">
+        <div class="modal-content">
+          <span class="close" @click="closeModal">&times;</span>
+          <img :src="modalImage" alt="画像の説明" />
+        </div>
+      </div>
+    </teleport>
+  </div>
 </template>
-<style>
-title {
-  margin-top: 25px;
-  text-align: center;
-  color: #ccc;
-}
+<style scoped>
 body {
   margin-top: 20px;
   margin-left: 30px;
@@ -107,16 +38,69 @@ body {
 }
 
 .image-tile img {
-  width: 100%;
+  width: 300px;
   height: auto;
   display: block;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  margin: 10% auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.close:hover {
+  color: #000;
 }
 </style>
 
 <script>
 export default {
+  name: "LookPage",
   data() {
-    return { imagePath: "src/assets/images/02.jpg" };
+    return {
+      images: [
+        "/images/01.jpg",
+        "/images/02.jpg",
+        // 他の画像のパスを追加
+      ],
+      modalVisible: false, // モーダルの表示状態
+      modalImage: "", // モーダルに表示する画像のパス
+    };
+  },
+  methods: {
+    openModal(image) {
+      this.modalImage = image; // モーダルに表示する画像を設定
+      this.modalVisible = true; // モーダルを表示
+    },
+    closeModal() {
+      this.modalVisible = false; // モーダルを閉じる
+    },
   },
 };
 </script>

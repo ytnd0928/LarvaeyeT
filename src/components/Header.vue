@@ -1,7 +1,9 @@
 <template>
   <v-app-bar app color="black">
     <v-spacer />
-    <img src="/images/larvae.jpg" class="header-title mx-7" />
+    <router-link to="/">
+      <img src="/images/larlogo.png" class="header-title mx-7" />
+    </router-link>
     <div class="menu">
       <v-btn text to="/">Home</v-btn>
       <v-btn text to="/look">LOOK</v-btn>
@@ -12,7 +14,7 @@
 
 <style>
 .custom-bg-color {
-  background-color: black; /* カスタムの背景色を指定 */
+  background-color: #000000; /* カスタムの背景色を指定 */
   height: 1500px;
 }
 

@@ -78,7 +78,6 @@ body {
   margin: 10% auto;
   padding: 20px;
   max-width: 500px;
-  background-color: #fff;
   border-radius: 5px;
 }
 .modal-content img {

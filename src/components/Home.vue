@@ -11,6 +11,10 @@
         </v-overlay> -->
       <!-- メインコンテンツセクション -->
       <div class="custom-bg-color">
+        <video autoplay loop muted class="video-top">
+          <source src="/images/runway.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <video width="1200" height="400" autoplay loop muted class="video-fit">
           <source src="/images/promo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -31,6 +35,11 @@
 .custom-bg-color {
   background-color: black;
   margin-top: 10px;
+}
+video-top {
+  width: 100%;
+  margin-top: 520px;
+  object-fit: cover;
 }
 .video-fit {
   width: 100%;

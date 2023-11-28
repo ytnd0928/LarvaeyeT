@@ -29,6 +29,12 @@
   flex: 1 1;
 }
 
+.menu v-btn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .mt-2 {
   margin-top: 2rem; /* 2remのマージンを追加（調整可能） */
 }
@@ -50,6 +56,12 @@
 
   .menu {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu v-btn {
+    max-width: 60px; /* adjust as needed */
   }
 }
 </style>

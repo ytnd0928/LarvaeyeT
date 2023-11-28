@@ -90,6 +90,12 @@ body {
 .close:hover {
   color: #000;
 }
+
+@media (max-width: 600px) {
+  .image-tile {
+    flex-basis: calc(50% - 20px); /* 2列に分割 */
+  }
+}
 </style>
 
 <script>

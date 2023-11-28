@@ -6,7 +6,7 @@
           <div class="video-fit">
             <video
               class="responsive-video"
-              src="../images/static.mp4"
+              src="../images/static2.mp4"
               autoplay
               loop
               muted

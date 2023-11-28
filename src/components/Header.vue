@@ -32,6 +32,26 @@
 .mt-2 {
   margin-top: 2rem; /* 2remのマージンを追加（調整可能） */
 }
+
+.header-title {
+  width: 400px;
+}
+
+@media (max-width: 991px) {
+  .header-title {
+    width: 30px; /* adjust as needed */
+  }
+}
+
+@media (max-width: 767px) {
+  .header-title {
+    width: 200px; /* adjust as needed */
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+}
 </style>
 
 <script>

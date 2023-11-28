@@ -108,14 +108,17 @@
   font-weight: bold;
   font-size: 18px;
   margin-right: 40px;
+  font-size: 2vw;
 }
 
 .indent {
   padding-left: 20px; /* adjust as needed */
+  padding-left: 2vw;
 }
 
 .double-indent {
   padding-left: 195px; /* adjust as needed */
+  padding-left: 4vw;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

@@ -5,6 +5,7 @@
         <v-container class="text-center grey">
           <div class="video-fit">
             <video
+              class="responsive-video"
               src="../images/static.mp4"
               autoplay
               loop
@@ -12,14 +13,9 @@
               playsinline
             ></video>
           </div>
-          <!-- 画像を中央に配置 -->
-          <!-- <div class="image-home">
-            <img src="../images/home2.png" alt="home" />
-          </div> -->
           <div class="logo_center">
             <img src="../images/logo_under.png" alt="logo_center" />
           </div>
-          <!-- <div class="logo_under"> -->
           <img
             src="../images/larlogo.png"
             class="bottom-logo"
@@ -32,7 +28,6 @@
             <span class="indent">&nbsp;&nbsp;larvaeyet@gmail.com</span></v-h1
           >
         </v-container>
-        <!-- その他のコンテンツ -->
       </div>
     </v-main>
   </v-app>
@@ -63,6 +58,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.responsive-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .image-home {
   margin: 0 auto;
   object-fit: cover;
@@ -112,6 +116,27 @@
 
 .double-indent {
   padding-left: 195px; /* adjust as needed */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .video-fit {
+    height: 50%; /* adjust as needed */
+  }
+
+  .bottom-logo {
+    width: 30%; /* adjust as needed */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  .video-fit {
+    height: 60%; /* adjust as needed */
+  }
+
+  .bottom-logo {
+    width: 40%; /* adjust as needed */
+  }
 }
 </style>
 

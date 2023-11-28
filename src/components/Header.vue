@@ -4,12 +4,23 @@
     <router-link to="/">
       <img src="/images/larlogo.png" class="header-title mx-7" />
     </router-link>
-    <div class="menu">
+    <v-app-bar-nav-icon
+      class="hidden-lg-and-up"
+      @click.stop="drawer = !drawer"
+    ></v-app-bar-nav-icon>
+    <div class="menu hidden-md-and-down">
       <v-btn text to="/">Home</v-btn>
       <v-btn text to="/look">LOOK</v-btn>
       <v-btn text to="/store">STORE</v-btn>
     </div>
   </v-app-bar>
+  <v-navigation-drawer v-model="drawer" app temporary right top>
+    <v-list>
+      <v-list-item link to="/">Home</v-list-item>
+      <v-list-item link to="/look">LOOK</v-list-item>
+      <v-list-item link to="/store">STORE</v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 
 <style>
@@ -29,12 +40,6 @@
   flex: 1 1;
 }
 
-.menu v-btn {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .mt-2 {
   margin-top: 2rem; /* 2remのマージンを追加（調整可能） */
 }
@@ -43,31 +48,45 @@
   width: 400px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 800px) {
   .header-title {
     width: 30px; /* adjust as needed */
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .header-title {
     width: 200px; /* adjust as needed */
   }
+}
 
+@media (min-width: 801px) {
   .menu {
-    flex-direction: column;
+    display: flex;
+  }
+  .v-app-bar-nav-icon {
+    display: none;
   }
 }
 
 @media (max-width: 800px) {
-  .menu v-btn {
-    max-width: 60px; /* adjust as needed */
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .v-app-bar-nav-icon {
+    display: none;
   }
 }
 </style>
 
 <script>
 export default {
+  data: () => ({
+    drawer: false,
+  }),
   name: "AppHeader", // コンポーネント名を "AppHeader" に変更
 };
 </script>

@@ -1,14 +1,19 @@
 <template>
   <body>
-    <!-- ギャラリー -->
-    <div class="image-gallery">
-      <div
-        class="image-tile"
-        v-for="(image, index) in images"
-        :key="index"
-        @click="openModal(image)"
-      >
-        <img :src="image" alt="画像の説明" />
+    <div>
+      <h1 class="title">2023AW LOOK</h1>
+    </div>
+    <div class="gallery">
+      <!-- ギャラリー -->
+      <div class="image-gallery">
+        <div
+          class="image-tile"
+          v-for="(image, index) in images"
+          :key="index"
+          @click="openModal(image)"
+        >
+          <img :src="image" alt="画像の説明" />
+        </div>
       </div>
     </div>
   </body>
@@ -24,8 +29,13 @@
   </teleport>
 </template>
 <style scoped>
-body {
-  margin-top: 20px;
+.title {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 180px;
+}
+.gallery {
   background-color: black;
   display: flex;
   justify-content: center; /* ギャラリー全体を中央寄せ */
@@ -39,7 +49,7 @@ body {
 }
 
 .image-gallery {
-  margin-top: 80px;
+  margin-top: 50px;
   margin-bottom: 150px;
   display: flex;
   flex-wrap: wrap;

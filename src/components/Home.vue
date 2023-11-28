@@ -106,9 +106,9 @@
   width: 100%;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
   margin-right: 40px;
-  font-size: 2vw;
+  text-align: center;
 }
 
 .indent {
@@ -139,6 +139,13 @@
 
   .bottom-logo {
     width: 40%; /* adjust as needed */
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    font-size: 6px; /* smaller size for screens 800px and below */
+    text-align: center;
   }
 }
 </style>

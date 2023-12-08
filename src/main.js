@@ -2,8 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
-import router from "./router/index"; // Vue Routerの設定をインポート
-// import { createRouter, createWebHistory } from 'vue-router';
+import router from "./router/index";
 
 loadFonts();
 

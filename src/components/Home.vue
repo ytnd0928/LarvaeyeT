@@ -1,34 +1,28 @@
 <template>
   <v-app class="custom-bg-color">
     <v-main>
-      <div class="custom-bg-color">
-        <v-container class="text-center grey">
-          <div class="video-fit">
-            <video
-              class="responsive-video"
-              src="../images/static2.mp4"
-              autoplay
-              loop
-              muted
-              playsinline
-            ></video>
-          </div>
-          <div class="logo_center">
-            <img src="../images/logo_under.png" alt="logo_center" />
-          </div>
-          <img
-            src="../images/larlogo.png"
-            class="bottom-logo"
-            alt="logo_under"
-          />
-          <v-h1 class="footer">
-            Instagram &amp; Twitter :
-            <span class="indent">@larvaeyet</span> <br />
-            <span class="double-indent">&nbsp;&nbsp;Email :</span>
-            <span class="indent">&nbsp;&nbsp;larvaeyet@gmail.com</span></v-h1
-          >
-        </v-container>
-      </div>
+      <v-container>
+        <div class="video-fit">
+          <video
+            class="responsive-video"
+            src="../images/static2.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </div>
+        <div class="logo_center">
+          <img src="../images/logo_under.png" alt="logo_center" />
+        </div>
+        <img src="../images/larlogo.png" class="bottom-logo" alt="logo_under" />
+        <v-h1 class="footer">
+          Instagram &amp; Twitter :
+          <span class="indent">@larvaeyet</span> <br />
+          <span class="double-indent">&nbsp;&nbsp;Email :</span>
+          <span class="indent">&nbsp;&nbsp;larvaeyet@gmail.com</span></v-h1
+        >
+      </v-container>
     </v-main>
   </v-app>
 </template>

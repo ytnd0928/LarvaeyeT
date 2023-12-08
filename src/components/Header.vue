@@ -25,7 +25,7 @@
 
 <style>
 .custom-bg-color {
-  background-color: #000000; /* カスタムの背景色を指定 */
+  background-color: #000000; 
   height: 1500px;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .mt-2 {
-  margin-top: 2rem; /* 2remのマージンを追加（調整可能） */
+  margin-top: 2rem;
 }
 
 .header-title {
@@ -50,13 +50,13 @@
 
 @media (max-width: 800px) {
   .header-title {
-    width: 30px; /* adjust as needed */
+    width: 30px; 
   }
 }
 
 @media (max-width: 800px) {
   .header-title {
-    width: 200px; /* adjust as needed */
+    width: 200px;
   }
 }
 
@@ -87,6 +87,6 @@ export default {
   data: () => ({
     drawer: false,
   }),
-  name: "AppHeader", // コンポーネント名を "AppHeader" に変更
+  name: "AppHeader",
 };
 </script>

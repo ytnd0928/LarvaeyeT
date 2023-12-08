@@ -11,6 +11,7 @@
     <div class="menu hidden-md-and-down">
       <v-btn text to="/">Home</v-btn>
       <v-btn text to="/look">LOOK</v-btn>
+      <v-btn text to="/news">NEWS</v-btn>
       <v-btn text to="/store">STORE</v-btn>
     </div>
   </v-app-bar>
@@ -18,6 +19,7 @@
     <v-list>
       <v-list-item link to="/">Home</v-list-item>
       <v-list-item link to="/look">LOOK</v-list-item>
+      <v-list-item link to="/news">NEWS</v-list-item>
       <v-list-item link to="/store">STORE</v-list-item>
     </v-list>
   </v-navigation-drawer>
@@ -25,7 +27,7 @@
 
 <style>
 .custom-bg-color {
-  background-color: #000000; 
+  background-color: #000000;
   height: 1500px;
 }
 
@@ -50,7 +52,7 @@
 
 @media (max-width: 800px) {
   .header-title {
-    width: 30px; 
+    width: 30px;
   }
 }
 

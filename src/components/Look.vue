@@ -20,9 +20,9 @@
 
   <!-- モーダルを表示するためのteleportコンポーネント -->
   <teleport to="body">
-    <div v-if="modalVisible" class="modal">
+    <div v-if="modalVisible" class="modal" @click.self="modalVisible = false">
       <div class="modal-content">
-        <span class="close" @click="closeModal">&times;</span>
+        <span class="close" @click.stop="modalVisible = false">&times;</span>
         <img :src="modalImage" alt="画像の説明" />
       </div>
     </div>

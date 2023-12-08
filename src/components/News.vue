@@ -17,12 +17,10 @@
       </div>
     </div>
   </body>
-
-  <!-- モーダルを表示するためのteleportコンポーネント -->
   <teleport to="body">
-    <div v-if="modalVisible" class="modal">
+    <div v-if="modalVisible" class="modal" @click.self="modalVisible = false">
       <div class="modal-content">
-        <span class="close" @click="closeModal">&times;</span>
+        <span class="close" @click.stop="modalVisible = false">&times;</span>
         <img :src="modalImage" alt="画像の説明" />
       </div>
     </div>
@@ -114,38 +112,40 @@ export default {
   data() {
     return {
       images: [
+        "/images/party/2(2).jpg",
+        "/images/party/5(2).jpg",
+        "/images/party/8.jpg",
+        "/images/party/11.jpg",
+        "/images/party/12.jpg",
+        "/images/party/14.jpg",
+        "/images/party/18.jpg",
+        "/images/party/19.jpg",
+        "/images/party/21.jpg",
+        "/images/party/22.jpg",
+        "/images/party/23.jpg",
+        "/images/party/27.jpg",
         "/images/party/1.jpg",
         "/images/party/1(2).jpg",
         "/images/party/2.jpg",
-        "/images/party/2(2).jpg",
         "/images/party/3.jpg",
         "/images/party/3(2).jpg",
         "/images/party/4.jpg",
         "/images/party/4(2).jpg",
         "/images/party/5.jpg",
-        "/images/party/5(2).jpg",
         "/images/party/6.jpg",
         "/images/party/7.jpg",
-        "/images/party/8.jpg",
         "/images/party/9.jpg",
         "/images/party/10.jpg",
-        "/images/party/11.jpg",
-        "/images/party/12.jpg",
         "/images/party/13.jpg",
-        "/images/party/14.jpg",
         "/images/party/15.jpg",
         "/images/party/16.jpg",
         "/images/party/17.jpg",
-        "/images/party/18.jpg",
-        "/images/party/19.jpg",
         "/images/party/20.jpg",
-        "/images/party/21.jpg",
-        "/images/party/22.jpg",
-        "/images/party/23.jpg",
+
         "/images/party/24.jpg",
         "/images/party/25.jpg",
         "/images/party/26.jpg",
-        "/images/party/27.jpg",
+
         "/images/party/28.jpg",
         "/images/party/29.jpg",
         "/images/party/30.jpg",

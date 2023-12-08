@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Look from "../components/Look"; // Look.vueのパスを適切に設定してください
+import Look from "../components/Look";
 import Home from "../components/Home";
 import Shop from "../components/Shop";
 // Vue.use(VueRouter);

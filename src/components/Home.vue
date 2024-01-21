@@ -5,7 +5,7 @@
         <div class="video-fit">
           <video
             class="responsive-video"
-            src="../images/static2.mp4"
+            src="https://larvaeyet-storage-2936ebd091750-staging.s3.ap-northeast-1.amazonaws.com/public/3D+RUNWAY+SHOW.mp4"
             autoplay
             loop
             muted

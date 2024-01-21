@@ -5,7 +5,7 @@
         <div class="video-fit">
           <video
             class="responsive-video"
-            src="https://larvaeyet-storage-2936ebd091750-staging.s3.ap-northeast-1.amazonaws.com/public/3D+RUNWAY+SHOW.mp4"
+            src="https://amplify-amplify1f8a99da87784-staging-91750-deployment.s3.ap-northeast-1.amazonaws.com/3D+RUNWAY+SHOW.mp4"
             autoplay
             loop
             muted
@@ -35,7 +35,7 @@
 .video-fit {
   object-fit: cover;
   margin: 0 auto;
-  top: 10%;
+  top: 5%;
   right: 0%;
   left: 0%;
   width: 100%;
@@ -117,7 +117,8 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
   .video-fit {
-    height: 50%; /* adjust as needed */
+    height: 50%;
+    width: 60%; /* adjust as needed */
   }
 
   .bottom-logo {
@@ -128,11 +129,29 @@
 /* For mobile devices */
 @media (max-width: 767px) {
   .video-fit {
-    height: 60%; /* adjust as needed */
+    top: 5%; /* adjust as needed */
+    height: 300px;
   }
 
   .bottom-logo {
     width: 40%; /* adjust as needed */
+    margin-top: -180%;
+  }
+}
+
+@media (max-width: 500px) {
+  .video-fit video {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo_center img {
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+    margin-top: -120%;
   }
 }
 
@@ -140,6 +159,7 @@
   .footer {
     font-size: 6px; /* smaller size for screens 800px and below */
     text-align: center;
+    margin-top: -190%;
   }
 }
 </style>
